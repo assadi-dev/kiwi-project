@@ -1,0 +1,30 @@
+const express = require("express");
+const app = express();
+require("dotenv").config({ path: "./config/.env" });
+require("./config/dbConnect");
+const port = process.env.PORT;
+const bodyParser = require("body-parser");
+const cookieParser = require("cookie-parser");
+const userRoutes = require("./routes/user.routes");
+const postRoutes = require("./routes/post.routes");
+const { checkUser, requireAuth } = require("./middleware/auth.middleware");
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cookieParser());
+
+//jwt
+app.get("*", checkUser);
+app.get("/jwtid", requireAuth, (req, res, next) => {
+  res.status(200).send(res.locals.user._id);
+});
+
+//Routes
+
+app.use("/api/user", userRoutes);
+app.use("/api/post", postRoutes);
+
+// Server Listen
+app.listen(port, () => {
+  console.log(`Listening on port ${port}`);
+});
