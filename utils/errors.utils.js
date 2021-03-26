@@ -27,3 +27,14 @@ module.exports.signInErrors = (err) => {
 
   return errors;
 };
+
+//Erreurs fichiers
+
+module.exports.uploadErrors = (err) => {
+  let errors = { format: "", maxSize: "" };
+  if (err.message.includes("Invalid file")) errors.format = "Format non valide";
+
+  if (err.message.includes("Max size")) errors.maxSize = "Fichier volumineux";
+
+  return errors;
+};
