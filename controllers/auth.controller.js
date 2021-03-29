@@ -21,7 +21,7 @@ module.exports.signUp = async (req, res) => {
       .json({ user: user._id, message: `Ajout d'un nouveau utilisateur` });
   } catch (err) {
     const errors = signUpErrors(err);
-    res.status(400).send({ errors });
+    res.status(200).send({ errors });
   }
 };
 
