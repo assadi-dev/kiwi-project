@@ -80,7 +80,10 @@ const ProfileUpdate = () => {
                       <li key={user._id}>
                         <img src={user.picture} alt="user_pic" />
                         <h4>{user.pseudo}</h4>
-                        <FollowHandler idToFollow={user._id} />
+                        <FollowHandler
+                          idToFollow={user._id}
+                          type="suggestion"
+                        />
                       </li>
                     );
                   }
@@ -105,7 +108,10 @@ const ProfileUpdate = () => {
                       <li key={user._id}>
                         <img src={user.picture} alt="user_pic" />
                         <h4>{user.pseudo}</h4>
-                        <FollowHandler idToFollow={user._id} />
+                        <FollowHandler
+                          idToFollow={user._id}
+                          type="suggestion"
+                        />
                       </li>
                     );
                   }
