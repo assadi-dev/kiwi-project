@@ -8,12 +8,16 @@ import { applyMiddleware, createStore } from "redux";
 import thunk from "redux-thunk";
 import { composeWithDevTools } from "redux-devtools-extension";
 import rootReducer from "./redux/reducers";
+import { getUsers } from "./redux/actions/users.action";
 
 // dev Tools
+
 const store = createStore(
   rootReducer,
   composeWithDevTools(applyMiddleware(thunk))
 );
+
+store.dispatch(getUsers());
 
 ReactDOM.render(
   <Provider store={store}>

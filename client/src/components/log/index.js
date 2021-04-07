@@ -7,10 +7,10 @@ const Log = ({ signIn, signUp }) => {
   const [signInModal, setSignInModal] = useState(signIn);
 
   const handleModals = (e) => {
-    if (e.target.id == "register") {
+    if (e.target.id === "register") {
       setSignInModal(false);
       setSignUpModal(true);
-    } else if (e.target.id == "login") {
+    } else if (e.target.id === "login") {
       setSignUpModal(false);
       setSignInModal(true);
     }
