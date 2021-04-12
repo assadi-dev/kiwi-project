@@ -1,5 +1,5 @@
 .profil-page {
-  margin: 80px auto 0;
+  margin: 80px auto ;
   max-width: 1200px;
 
   .icons {
@@ -101,6 +101,9 @@
   h1 {
     text-align: center;
     margin: 10px 0 6px;
+    @media screen and(max-width: 550px) {
+      font-size: 1.4rem;
+    }
   }
   .img-container {
     display: grid;

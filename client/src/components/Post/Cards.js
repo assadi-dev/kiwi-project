@@ -112,6 +112,7 @@ const Cards = ({ post }) => {
                   alt="comment"
                   onClick={() => setShowComment(!showComment)}
                 />
+                <i class="fal fa-comment-alt-lines"></i>
                 <span>{post.comments.length}</span>
               </div>
               <LikeButton post={post} />

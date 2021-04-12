@@ -25,7 +25,7 @@ const FriendsHint = () => {
     } else if (window.innerHeight > 720) {
       array.length = 4;
     } else if (window.innerHeight > 610) {
-      array.length = 2;
+      array.length = 3;
     } else if (window.innerHeight > 540) {
       array.length = 1;
     } else {
