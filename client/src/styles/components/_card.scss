@@ -53,6 +53,7 @@
       display: flex;
       justify-content: space-between;
       margin: 2px 0 4px;
+      min-height: 35px;
 
       @media screen and(max-width: 590px) {
         margin: 12px 0 14px;
@@ -244,8 +245,20 @@
             font-family: $font-1;
           }
           span {
-            transform: translateX(6px);
+            transform: translate(6px,3px);
+            cursor: pointer;
+            -webkit-transform: translate(6px,3px);
+            -moz-transform: translate(6px,3px);
+            -ms-transform: translate(6px,3px);
+            -o-transform: translate(6px,3px);
+}
+
+          img{
+            box-shadow: none;
+            height: 15px;
+            width: 15px;
           }
+
         }
 
         span {

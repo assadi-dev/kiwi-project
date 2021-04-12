@@ -27,7 +27,7 @@ module.exports.createPost = async (req, res) => {
       if (req.file.size > 500000) throw Error("Max size");
     } catch (err) {
       const errors = uploadErrors(err);
-      return res.status(400).json(errors);
+      return res.status(200).json(errors);
     }
 
     fileName = req.body.posterId + Date.now() + ".jpg";
