@@ -316,7 +316,7 @@
             float: right;
 
             span {
-              background: $white;
+              background: $color-2;
               padding: 10px 5px;
               border-radius: 50px;
               margin-right: 6px;
@@ -324,7 +324,7 @@
               cursor: pointer;
 
               &:hover {
-                background: $color-2;
+                background: $color-1;
               }
 
               img {
