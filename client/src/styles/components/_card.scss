@@ -9,6 +9,8 @@
   position: relative;
   min-height: 100px;
 
+ 
+
   @media screen and(max-width: 590px) {
     grid-template-columns: 1fr;
   }

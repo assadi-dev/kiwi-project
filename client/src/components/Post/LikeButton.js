@@ -36,7 +36,9 @@ const LikeButton = ({ post }) => {
           closeOnDocumentClick
         >
           {" "}
-          <div>Connectez-vous pour aimer ce post !</div>{" "}
+          <div className="text-black">
+            Connectez-vous pour aimer ce post !
+          </div>{" "}
         </Popup>
       )}
       {uid && liked && (
