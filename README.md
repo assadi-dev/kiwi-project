@@ -5,7 +5,7 @@
 
 Avec system d'authentification en jwt 
 identifiant pour tester l'appli :
-- email :test@gmail.com.
+- email : test@gmail.com.
 - mot de passe : password.
 
 Possibilite d'aimer ou de ne plus aimer un post ,créer editer ou supprimer un post, ajouter ou supprimer un commentaire.
