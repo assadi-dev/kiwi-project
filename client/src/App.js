@@ -20,7 +20,7 @@ function App() {
         .then((res) => {
           setUid(res.data);
         })
-        .catch((err) => console.log("deconnected"));
+        .catch((err) => console.log("Deconnected"));
     };
     fetchToken();
     if (uid) {
